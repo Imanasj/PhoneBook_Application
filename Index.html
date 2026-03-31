@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Book</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+  <div class="container mt-5 mb-5">
+    <!-- Header -->
+    <div class="row mb-4">
+      <div class="col-md-8">
+        <h1 class="display-4"><i class="fas fa-phone-alt"></i> Phone Book</h1>
+      </div>
+      <div class="col-md-4 text-end">
+        <div class="card bg-primary text-white">
+          <div class="card-body">
+            <h5 class="card-title">Total Contacts</h5>
+            <h2 id="contactCount">0</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Contact Card -->
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0"><i class="fas fa-plus"></i> Add New Contact</h5>
+      </div>
+      <div class="card-body">
+        <input type="text" id="nameInput" class="form-control mb-2" placeholder="Enter name">
+        <input type="text" id="phoneInput" class="form-control mb-3" placeholder="Enter phone number">
+        <button class="btn btn-primary btn-lg" onclick="addContact()">
+          <i class="fas fa-plus"></i> Add Contact
+        </button>
+      </div>
+    </div>
+
+    <!-- Contacts List -->
+    <div id="contactsList"></div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="alert alert-info text-center">
+      <i class="fas fa-address-book"></i> No contacts yet. Add one to get started!
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
